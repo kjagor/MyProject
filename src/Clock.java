@@ -6,14 +6,17 @@ import javax.swing.Timer;
 
 public class Clock extends Applet implements ActionListener{
 
-    TextField tunnid = new TextField("00");
-    TextField minutid = new TextField("00");
+    Calendar calendar = GregorianCalendar.getInstance();
+    int hours = calendar.get(Calendar.HOUR_OF_DAY);
+    int min = calendar.get(Calendar.MINUTE);
+    TextField tunnid = new TextField(hours);// gets hour in 24h format
+    TextField minutid = new TextField(min);
     Button button = new Button("Set Alarm!");
 
     int aminut = 0;
     int atund = 0;
     boolean aratus = false;
-    Font mina = new Font ("Courier New", 2, 40);
+    Font me = new Font ("Courier New", 2, 40);
     Clock(){
         this.add(tunnid);
         this.add(minutid);
@@ -84,7 +87,7 @@ public class Clock extends Applet implements ActionListener{
                 g.setColor(new Color(131, 114, 255));
                 g.fillRect(0, 0, (int)as.width, (int)as.height);
                 g.setColor(Color.white);
-                g.setFont(mina);
+                g.setFont(me);
                 g.drawString("Please, WAKE UP!", kx-30, ky);
             }
         }
