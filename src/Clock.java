@@ -81,9 +81,9 @@ public class Clock extends Applet implements ActionListener{
             g.drawLine(kx,ky,ax,ay);
 
             if(tund==atund && minut == aminut){
-                g.setColor(new Color(131, 114, 255));
+                g.setColor(new Color(255, 253, 26));
                 g.fillRect(0, 0, (int)as.width, (int)as.height);
-                g.setColor(Color.white);
+                g.setColor(Color.black);
                 g.setFont(me);
                 g.drawString("Please, WAKE UP!", kx-30, ky);
             }
@@ -115,7 +115,7 @@ public class Clock extends Applet implements ActionListener{
 
     public static void main(String[] args){
 
-        Frame f = new Frame("Tik Tok");
+        Frame f = new Frame("Kristian Andreas Jagor - IVSB11 - Project Clock");
 
         f.add(new Clock());
 
