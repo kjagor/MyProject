@@ -6,17 +6,14 @@ import javax.swing.Timer;
 
 public class Clock extends Applet implements ActionListener{
 
-    Calendar calendar = GregorianCalendar.getInstance();
-    int hours = calendar.get(Calendar.HOUR_OF_DAY);
-    int min = calendar.get(Calendar.MINUTE);
-    TextField tunnid = new TextField(hours);// gets hour in 24h format
-    TextField minutid = new TextField(min);
+    TextField tunnid = new TextField("00");
+    TextField minutid = new TextField("00");
     Button button = new Button("Set Alarm!");
 
     int aminut = 0;
     int atund = 0;
     boolean aratus = false;
-    Font me = new Font ("Courier New", 2, 40);
+    Font me = new Font ("Courier New", Font.BOLD, 40);
     Clock(){
         this.add(tunnid);
         this.add(minutid);
