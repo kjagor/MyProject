@@ -25,6 +25,7 @@ public class Clock extends Applet implements ActionListener{
         button1.addActionListener(this);
 
 
+
     }
 
     public void paint(Graphics g){ //Kella graafiline osa
@@ -114,6 +115,11 @@ public class Clock extends Applet implements ActionListener{
         }
 
         repaint();
+
+        if(evt.getActionCommand()== button1.getLabel()){
+            aratus=true;
+         }
+         repaint();
 
     }
 
