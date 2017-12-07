@@ -9,7 +9,7 @@ public class Clock extends Applet implements ActionListener{
     TextField tunnid = new TextField("00");
     TextField minutid = new TextField("00");
     Button button = new Button("Set Alarm!");
-
+    Button button1 = new Button("Restart");
     int aminut = 0;
     int atund = 0;
     boolean aratus = false;
@@ -18,12 +18,16 @@ public class Clock extends Applet implements ActionListener{
         this.add(tunnid);
         this.add(minutid);
         this.add(button);
+        this.add(button1);
         button.addActionListener(this);
         Timer t = new Timer(1000, this);
         t.start();
+        button1.addActionListener(this);
+
+
     }
 
-    public void paint(Graphics g){
+    public void paint(Graphics g){ //Kella graafiline osa
 
         Dimension as = this.getSize();
 
@@ -85,7 +89,7 @@ public class Clock extends Applet implements ActionListener{
                 g.fillRect(0, 0, (int)as.width, (int)as.height);
                 g.setColor(Color.black);
                 g.setFont(me);
-                g.drawString("Please, WAKE UP!", kx-30, ky);
+                g.drawString("Please, WAKE UP!", kx-45, ky);
             }
         }
     }
