@@ -104,13 +104,6 @@ public class Clock extends Applet implements ActionListener{
             atund = tund;
             aminut = minut;
 
-
-            if(evt.getSource()== button1) {
-                
-                System.exit(0);
-            }
-                
-
         }
         catch(Exception e){
 
@@ -118,7 +111,13 @@ public class Clock extends Applet implements ActionListener{
 
         repaint();
 
-    }
+        if(evt.getSource()== button1) {
+            System.exit(0);
+         }
+
+
+        }
+
 
     public static void main(String[] args){
 
