@@ -4,12 +4,13 @@ import java.util.*;
 import java.awt.event.*;
 import javax.swing.Timer;
 
+
 public class Clock extends Applet implements ActionListener{
 
     TextField tunnid = new TextField("00");
     TextField minutid = new TextField("00");
     Button button = new Button("Set Alarm!");
-    Button button1 = new Button("Restart");
+    Button button1 = new Button("Close!");
     int aminut = 0;
     int atund = 0;
     boolean aratus = false;
@@ -103,11 +104,12 @@ public class Clock extends Applet implements ActionListener{
             atund = tund;
             aminut = minut;
 
-            if(evt.getActionCommand()==button.getLabel()){
-                aratus=true;
-            }
 
-            repaint();
+            if(evt.getSource()== button1) {
+                
+                System.exit(0);
+            }
+                
 
         }
         catch(Exception e){
@@ -115,11 +117,6 @@ public class Clock extends Applet implements ActionListener{
         }
 
         repaint();
-
-        if(evt.getActionCommand()== button1.getLabel()){
-            aratus=true;
-         }
-         repaint();
 
     }
 
